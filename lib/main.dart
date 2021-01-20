@@ -34,19 +34,27 @@ class _MyHomePageState extends State<MyHomePage> {
   Directory appDocsDir;
   String appDocsDirPath;
 
+  File bookList;
+  final RegExp bookTitleRegex = RegExp(r"=+\n");
+
   final List<String> defaultBooks = ['your_father_the_hero.md'];
+
+  List<File> books;
 
   Future<String> getFileData(String path) async {
     return await rootBundle.loadString(path);
   }
 
-  void writeDefaultBooks(String path) {
+  void registerDefaultBooks() {
     Future<String> defaultBookContent;
     for (final name in defaultBooks) {
-      defaultBookContent = getFileData('default_books/$name');
+      String path = 'default_books/$name';
+      defaultBookContent = getFileData(path);
       defaultBookContent.then((content) {
-        final file = new File('$path/$name');
-        file.writeAsString('$content');
+        String title = content.split(bookTitleRegex).first;
+        print('$path|$title');
+        bookList.writeAsStringSync('$path|$title',
+            mode: FileMode.append, flush: true);
       });
     }
   }
@@ -56,9 +64,17 @@ class _MyHomePageState extends State<MyHomePage> {
     getApplicationDocumentsDirectory().then((dir) {
       appDocsDir = dir;
       appDocsDirPath = dir.path;
-      writeDefaultBooks(appDocsDirPath);
+      bookList = File('$appDocsDirPath/bookList');
+      bookList.exists().then((notFirstTime) {
+        if (notFirstTime) {
+          // do nothing
+          bookList.readAsString().then((f) => print(f));
+        } else {
+          bookList.create();
+          registerDefaultBooks();
+        }
+      });
     });
-
     super.initState();
   }
 
