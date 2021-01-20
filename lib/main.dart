@@ -11,18 +11,13 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-
-  final String _title = 'Gamebook';
+  final String title = 'Gamebook';
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: '$_title',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
-      home: MyHomePage(title: '$_title: Chooser'),
+      title: '$title',
+      home: MyHomePage(title: '$title: Chooser'),
     );
   }
 }
@@ -36,35 +31,34 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  Directory appDocsDir;
+  String appDocsDirPath;
 
-  Future<Directory> _appDocumentsDirectory;
-
-  List<String> defaultBooks = ['Your_Father_The_Hero.md']; 
+  final List<String> defaultBooks = ['your_father_the_hero.md'];
 
   Future<String> getFileData(String path) async {
     return await rootBundle.loadString(path);
   }
 
-  @override
-  void initState() {
-    String appDocsDir; 
-    _appDocumentsDirectory = getApplicationDocumentsDirectory();
-    _appDocumentsDirectory.then((dir) {
-        appDocsDir = dir.path;
-    });
-
-    Future<String> _defaultBookContent;
+  void writeDefaultBooks(String path) {
+    Future<String> defaultBookContent;
     for (final name in defaultBooks) {
-      _defaultBookContent = getFileData('default_books/$name');
-      _defaultBookContent.then((content) {
-        final file = new File('$appDocsDir/$name');
+      defaultBookContent = getFileData('default_books/$name');
+      defaultBookContent.then((content) {
+        final file = new File('$path/$name');
         file.writeAsString('$content');
       });
     }
+  }
 
-    _appDocumentsDirectory.then(
-      (dir) => dir.list().listen(
-        (f) => print(f)));
+  @override
+  void initState() {
+    getApplicationDocumentsDirectory().then((dir) {
+      appDocsDir = dir;
+      appDocsDirPath = dir.path;
+      writeDefaultBooks(appDocsDirPath);
+    });
+
     super.initState();
   }
 
@@ -77,14 +71,10 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         child: ListView(
           children: <Widget>[
-            Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Text('Here be dragons...'),
-            ),
+            Text('Here be dragons...'),
           ],
         ),
       ),
     );
   }
 }
-
