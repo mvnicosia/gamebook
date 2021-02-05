@@ -2,94 +2,72 @@ import 'dart:async';
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart' show rootBundle;
-
 import 'package:path_provider/path_provider.dart';
 
-void main() {
-  runApp(MyApp());
+import 'models/book.dart';
+import 'models/booklist.dart';
+
+Future<void> main() async {
+  runApp(GamebookApp());
 }
 
-class MyApp extends StatelessWidget {
+class GamebookApp extends StatelessWidget {
   final String title = 'Gamebook';
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: '$title',
-      home: MyHomePage(title: '$title: Chooser'),
+      home: GamebookChooser(title: '$title: Chooser'),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
+class GamebookChooser extends StatefulWidget {
+
   final String title;
 
+  GamebookChooser({Key key, this.title}) : super(key: key);
+
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  _GamebookChooserState createState() => _GamebookChooserState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
-  Directory appDocsDir;
-  String appDocsDirPath;
-
-  File bookList;
-  final RegExp bookTitleRegex = RegExp(r"=+\n");
+class _GamebookChooserState extends State<GamebookChooser> {
 
   final List<String> defaultBooks = ['your_father_the_hero.md'];
+  BookList bookList = BookList('',{});
 
-  List<File> books;
-
-  Future<String> getFileData(String path) async {
-    return await rootBundle.loadString(path);
+  @override
+  void initState() {
+    super.initState();
+    _loadBookList();
   }
 
-  void registerDefaultBooks() {
-    Future<String> defaultBookContent;
+  void _loadBookList() async {
+    Directory dir = await getApplicationDocumentsDirectory();
+    bookList = BookList('${dir.path}/booklist.json',{});
     for (final name in defaultBooks) {
-      String path = 'default_books/$name';
-      defaultBookContent = getFileData(path);
-      defaultBookContent.then((content) {
-        String title = content.split(bookTitleRegex).first;
-        print('$path|$title');
-        bookList.writeAsStringSync('$path|$title',
-            mode: FileMode.append, flush: true);
+      Book book = await Book.fromDefaultBooks(name, dir.path);
+      BookList list = await bookList.add(book);
+      setState(() {
+        bookList = list;
       });
     }
   }
 
   @override
-  void initState() {
-    getApplicationDocumentsDirectory().then((dir) {
-      appDocsDir = dir;
-      appDocsDirPath = dir.path;
-      bookList = File('$appDocsDirPath/bookList');
-      bookList.exists().then((notFirstTime) {
-        if (notFirstTime) {
-          // do nothing
-          bookList.readAsString().then((f) => print(f));
-        } else {
-          bookList.create();
-          registerDefaultBooks();
-        }
-      });
-    });
-    super.initState();
-  }
-
-  @override
   Widget build(BuildContext context) {
+    List books = List.from(bookList.books.entries);
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Center(
-        child: ListView(
-          children: <Widget>[
-            Text('Here be dragons...'),
-          ],
-        ),
+      body: ListView.builder(
+        itemCount: books.length,
+        itemBuilder: (context, index) {
+          return Text(books[index].value.title);
+        }
       ),
     );
   }
