@@ -1,4 +1,4 @@
-package com.example.gamebook
+package com.mvnicosia.gamebook
 
 import io.flutter.embedding.android.FlutterActivity
 
