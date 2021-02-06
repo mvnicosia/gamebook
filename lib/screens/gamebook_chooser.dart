@@ -11,7 +11,9 @@ class GamebookChooser extends StatefulWidget {
 
   final String title;
 
-  GamebookChooser({Key key, this.title}) : super(key: key);
+  GamebookChooser({Key key, String appTitle}) :
+    title = '$appTitle: Chooser',
+    super(key: key);
 
   @override
   _GamebookChooserState createState() => _GamebookChooserState();

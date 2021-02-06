@@ -11,7 +11,7 @@ class GamebookApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: '$title',
-      home: GamebookChooser(title: '$title: Chooser'),
+      home: GamebookChooser(appTitle: title),
     );
   }
 }
