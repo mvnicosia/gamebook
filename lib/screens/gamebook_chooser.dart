@@ -7,6 +7,8 @@ import 'package:path_provider/path_provider.dart';
 import '../models/book.dart';
 import '../models/booklist.dart';
 
+import '../screens/gamebook_viewer.dart';
+
 class GamebookChooser extends StatefulWidget {
 
   final String title;
@@ -55,11 +57,12 @@ class _GamebookChooserState extends State<GamebookChooser> {
         itemBuilder: (context, index) {
           return InkWell(
             onTap: () {
-              print(selected);
-              setState(() {
-                selected = books[index].key;
-              });
-              print(selected);
+              Navigator.push(
+                context, 
+                MaterialPageRoute(
+                  builder: (context) => GamebookViewer(book: books[index].value),
+                ),
+              );
             },
             child: Card(
               child: Text(books[index].value.title),
