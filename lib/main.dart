@@ -37,6 +37,7 @@ class _GamebookChooserState extends State<GamebookChooser> {
 
   final List<String> defaultBooks = ['your_father_the_hero.md'];
   BookList bookList = BookList('',{});
+  String selected = "";
 
   @override
   void initState() {
@@ -66,7 +67,18 @@ class _GamebookChooserState extends State<GamebookChooser> {
       body: ListView.builder(
         itemCount: books.length,
         itemBuilder: (context, index) {
-          return Text(books[index].value.title);
+          return InkWell(
+            onTap: () {
+              print(selected);
+              setState(() {
+                selected = books[index].key;
+              });
+              print(selected);
+            },
+            child: Card(
+              child: Text(books[index].value.title),
+            ),
+          );
         }
       ),
     );
