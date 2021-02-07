@@ -15,6 +15,16 @@ class Book {
 
   Book(this.title, this.filepath);
 
+  Future<String> read() async {
+    File file = File(filepath);
+    bool exists = await file.exists();
+    if (exists) {
+      return await file.readAsString();
+    } else {
+      return Future.value('File not found!');
+    }
+  }
+
   Book.fromJson(Map<String, dynamic> json)
     : title = json['title'],
       filepath = json['filepath'];

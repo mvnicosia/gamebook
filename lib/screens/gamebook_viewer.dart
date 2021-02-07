@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:flutter_markdown/flutter_markdown.dart';
+
 import '../models/book.dart';
 
 class GamebookViewer extends StatefulWidget {
@@ -15,10 +17,16 @@ class GamebookViewer extends StatefulWidget {
 class _GamebookViewerState extends State<GamebookViewer> {
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context) => FutureBuilder(
+      future: widget.book.read(),
+      builder: (context, snapshot) => snapshot.hasData? 
+        _buildWidget(widget.book.title, snapshot.data) : const SizedBox(),
+  );
+
+  Widget _buildWidget(String title, String content) {
     return Scaffold(
-      appBar: AppBar(title: Text(widget.book.title),),
-      body: Text(widget.book.filepath),
+      appBar: AppBar(title: Text(title),),
+      body: Markdown(data: content),
     );
   }
 }
