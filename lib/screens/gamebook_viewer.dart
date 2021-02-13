@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 
 import '../models/book.dart';
+import '../models/section.dart';
 
 class GamebookViewer extends StatefulWidget {
 
@@ -16,17 +17,21 @@ class GamebookViewer extends StatefulWidget {
 
 class _GamebookViewerState extends State<GamebookViewer> {
 
-  @override
-  Widget build(BuildContext context) => FutureBuilder(
-      future: widget.book.read(),
-      builder: (context, snapshot) => snapshot.hasData? 
-        _buildWidget(widget.book.title, snapshot.data) : const SizedBox(),
-  );
+  Map<String,Section> bookMap = {'start': Section(text: 'Loading...')};
 
-  Widget _buildWidget(String title, String content) {
-    return Scaffold(
-      appBar: AppBar(title: Text(title),),
-      body: Markdown(data: content),
-    );
+  Future<void> _loadBook() async {
+    Map<String,Section> bookMap = await widget.book.read();
+    setState(() {
+      this.bookMap = bookMap;
+    });
   }
+
+  @override
+  Widget build(BuildContext context) {
+    _loadBook();
+    return Scaffold(
+      appBar: AppBar(title: Text(widget.book.title)),
+      body: Markdown(data: bookMap['start'].text),
+    );
+  } 
 }
