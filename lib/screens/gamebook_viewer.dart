@@ -18,6 +18,7 @@ class GamebookViewer extends StatefulWidget {
 class _GamebookViewerState extends State<GamebookViewer> {
 
   Map<String,Section> bookMap = {'start': Section(text: 'Loading...')};
+  String currentSection = 'start';
 
   Future<void> _loadBook() async {
     Map<String,Section> bookMap = await widget.book.read();
@@ -31,7 +32,7 @@ class _GamebookViewerState extends State<GamebookViewer> {
     _loadBook();
     return Scaffold(
       appBar: AppBar(title: Text(widget.book.title)),
-      body: Markdown(data: bookMap['start'].text),
+      body: Markdown(data: bookMap[currentSection].text),
     );
   } 
 }
