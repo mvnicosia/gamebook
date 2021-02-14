@@ -14,7 +14,7 @@ class Book {
   static final RegExp byRegex = RegExp(r"^\s{0,3}by");
   static final RegExp h2Regex = RegExp(r"^\s{0,3}##");
   static final RegExp h3Regex = RegExp(r"^\s{0,3}###");
-  static final RegExp anyHeadingRegex = RegExp(r"^\s{0,3}#{1,6}");
+  static final RegExp anyHeadingRegex = RegExp(r"^\s{0,3}#{1,3}");
 
   final String title;
   final String filepath;
@@ -46,12 +46,19 @@ class Book {
         section.text = lines[i];
         section.anchor = anchorReference(lines[i]);
         if (byRegex.hasMatch(lines[i+1])) {
-          section.text = '${section.text}\n${lines[i+1]}';
           i = i+1;
+          section.text = '${section.text}\n${lines[i]}';
         }
       } else if (h2Regex.hasMatch(lines[i])) {
         section.text = lines[i];
         section.anchor = anchorReference(lines[i]);
+      } else if (h3Regex.hasMatch(lines[i])) {
+        section.text = lines[i];
+        section.anchor = anchorReference(lines[i]);
+        while (!anyHeadingRegex.hasMatch(lines[i+1])) {
+          i = i+1;
+          section.text = '${section.text}\n${lines[i]}';
+        }
       } else {
         continue;
       }
