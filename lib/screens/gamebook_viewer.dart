@@ -17,13 +17,16 @@ class GamebookViewer extends StatefulWidget {
 
 class _GamebookViewerState extends State<GamebookViewer> {
 
-  Map<String,Section> bookMap = {'start': Section(text: 'Loading...')};
+  Map<String,Section> bookMap = {
+    'start': Section(text: 'Loading...'),
+    'error': Section(text: 'There was an error loading the book.'),
+  };
   String currentSection = 'start';
 
   Future<void> _loadBook() async {
     Map<String,Section> bookMap = await widget.book.read();
     setState(() {
-      this.bookMap = bookMap;
+      this.bookMap.addAll(bookMap);
     });
   }
 
@@ -43,7 +46,17 @@ class _GamebookViewerState extends State<GamebookViewer> {
               itemCount: choices.length,
               itemBuilder: (context, index) {
                 return InkWell(
-                  // TODO onTap
+                  onTap: () {
+                    if (bookMap.containsKey(choices[index])) {
+                      setState(() {
+                        currentSection = choices[index];
+                      });
+                    } else {
+                      setState(() {
+                        currentSection = 'error';
+                      });
+                    }
+                  },
                   child: Card(
                     child: Text(choices[index]),
                   ),

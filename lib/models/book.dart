@@ -52,6 +52,8 @@ class Book {
       } else if (h2Regex.hasMatch(lines[i])) {
         section.text = lines[i];
         section.anchor = anchorReference(lines[i]);
+      } else {
+        continue;
       }
       sections.add(section);
     }
