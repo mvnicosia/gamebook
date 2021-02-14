@@ -30,9 +30,29 @@ class _GamebookViewerState extends State<GamebookViewer> {
   @override
   Widget build(BuildContext context) {
     _loadBook();
+    List<String> choices = List.from(bookMap[currentSection].choices.keys);
     return Scaffold(
       appBar: AppBar(title: Text(widget.book.title)),
-      body: Markdown(data: bookMap[currentSection].text),
+      body: Column(
+        children: <Widget>[
+          Expanded(
+            child: Markdown(data: bookMap[currentSection].text),
+          ),
+          Expanded(
+            child: ListView.builder(
+              itemCount: choices.length,
+              itemBuilder: (context, index) {
+                return InkWell(
+                  // TODO onTap
+                  child: Card(
+                    child: Text(choices[index]),
+                  ),
+                );
+              },
+            ),
+          ),
+        ],
+      ),
     );
   } 
 }
