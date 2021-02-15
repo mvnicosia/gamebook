@@ -10,11 +10,7 @@ import 'section.dart';
 
 class Book {
 
-  static final RegExp h1Regex = RegExp(r"^\s{0,3}#");
-  static final RegExp byRegex = RegExp(r"^\s{0,3}by");
-  static final RegExp h2Regex = RegExp(r"^\s{0,3}##");
-  static final RegExp h3Regex = RegExp(r"^\s{0,3}###");
-  static final RegExp anyHeadingRegex = RegExp(r"^\s{0,3}#{1,3}");
+  static final RegExp anyHeadingRegex = RegExp(r"^\s{0,3}#{1,6}");
 
   final String title;
   final String filepath;
