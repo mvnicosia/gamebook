@@ -17,6 +17,12 @@ class GamebookViewer extends StatefulWidget {
 
 class _GamebookViewerState extends State<GamebookViewer> {
 
+  @override
+  initState() {
+    _loadBook();
+    super.initState();
+  }
+
   Map<String,Section> bookMap = {
     'start': Section(text: 'Loading...'),
     'error': Section(text: 'There was an error loading the book.'),
@@ -32,7 +38,6 @@ class _GamebookViewerState extends State<GamebookViewer> {
 
   @override
   Widget build(BuildContext context) {
-    _loadBook();
     List<String> choices = List.from(bookMap[currentSection].choices.keys);
     return Scaffold(
       appBar: AppBar(title: Text(widget.book.title)),
@@ -47,9 +52,9 @@ class _GamebookViewerState extends State<GamebookViewer> {
               itemBuilder: (context, index) {
                 return InkWell(
                   onTap: () {
-                    if (bookMap.containsKey(choices[index])) {
+                    if (bookMap[currentSection].choices.containsKey(choices[index])) {
                       setState(() {
-                        currentSection = choices[index];
+                        currentSection = bookMap[currentSection].choices[choices[index]];
                       });
                     } else {
                       setState(() {

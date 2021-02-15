@@ -82,7 +82,7 @@ class Book {
       last.
       trim().
       replaceAll(" ", "-").
-      replaceAll(RegExp(r"[,'?.]"), "").
+      replaceAll(RegExp(r"[^a-zA-Z0-9\-]"), "").
       toLowerCase();
   }
 
