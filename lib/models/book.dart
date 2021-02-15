@@ -11,6 +11,10 @@ import 'section.dart';
 class Book {
 
   static final RegExp anyHeadingRegex = RegExp(r"^\s{0,3}#{1,6}");
+  static final RegExp choicesRegex = RegExp(r"^_CHOICES:_");
+  static final RegExp ulRegex = RegExp(r"^[*-+]\s");
+  static final RegExp choiceLinkRegex = RegExp(
+      r"\[(?<linkText>[^\[\]]+)\]\((?<anchorText>#[\w\-]+)\)");
 
   final String title;
   final String filepath;
@@ -43,7 +47,23 @@ class Book {
         section.anchor = anchorReference(lines[i]);
         while (i<lines.length-1 && !anyHeadingRegex.hasMatch(lines[i+1])) {
           i = i+1;
-          section.text = '${section.text}\n${lines[i]}';
+          if (choicesRegex.hasMatch(lines[i])) {
+            while(i<lines.length-1 &&
+                !anyHeadingRegex.hasMatch(lines[i+1]) &&
+                ulRegex.hasMatch(lines[i+1])) {
+              i = i+1;
+              String line = lines[i].split(ulRegex).last.trim();
+              RegExpMatch match = choiceLinkRegex.firstMatch(line);
+              if (match != null) {
+                String linkText = match.namedGroup("linkText");
+                String anchorText = match.namedGroup("anchorText");
+                section.choices[linkText] = anchorText;
+              }
+            }
+            print(section.choices);
+          } else {
+            section.text = '${section.text}\n${lines[i]}';
+          }
         }
       } else {
         continue;

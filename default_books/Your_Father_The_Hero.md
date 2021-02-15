@@ -289,7 +289,7 @@ Your father leaps out of the chair, caught up in the story.
 With that, your father stands straight and bows his head.
 
 _CHOICES:_
-* [ Clap, “Hooray! Father, someday, I want to be hero, just like you.”](#one-hero-in-the-family)
+* [Clap, “Hooray! Father, someday, I want to be hero, just like you.”](#one-hero-in-the-family)
 
 
 ### One Hero in the Family
