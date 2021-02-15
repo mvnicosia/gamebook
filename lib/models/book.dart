@@ -42,20 +42,10 @@ class Book {
     List<Section> sections = List<Section>();
     for (int i=0; i<lines.length; i++) {
       Section section = Section();      
-      if (h1Regex.hasMatch(lines[i])) {
+      if (anyHeadingRegex.hasMatch(lines[i])) {
         section.text = lines[i];
         section.anchor = anchorReference(lines[i]);
-        if (byRegex.hasMatch(lines[i+1])) {
-          i = i+1;
-          section.text = '${section.text}\n${lines[i]}';
-        }
-      } else if (h2Regex.hasMatch(lines[i])) {
-        section.text = lines[i];
-        section.anchor = anchorReference(lines[i]);
-      } else if (h3Regex.hasMatch(lines[i])) {
-        section.text = lines[i];
-        section.anchor = anchorReference(lines[i]);
-        while (!anyHeadingRegex.hasMatch(lines[i+1])) {
+        while (i<lines.length-1 && !anyHeadingRegex.hasMatch(lines[i+1])) {
           i = i+1;
           section.text = '${section.text}\n${lines[i]}';
         }
