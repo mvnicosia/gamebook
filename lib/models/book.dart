@@ -60,7 +60,6 @@ class Book {
                 section.choices[linkText] = anchorText;
               }
             }
-            print(section.choices);
           } else {
             section.text = '${section.text}\n${lines[i]}';
           }

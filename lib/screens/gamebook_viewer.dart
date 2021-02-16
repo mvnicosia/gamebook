@@ -28,6 +28,7 @@ class _GamebookViewerState extends State<GamebookViewer> {
     'error': Section(text: 'There was an error loading the book.'),
   };
   String currentSection = 'start';
+  String previousSection = null;
 
   Future<void> _loadBook() async {
     Map<String,Section> bookMap = await widget.book.read();
@@ -39,6 +40,15 @@ class _GamebookViewerState extends State<GamebookViewer> {
   @override
   Widget build(BuildContext context) {
     List<String> choices = List.from(bookMap[currentSection].choices.keys);
+    var undo = null;
+    if (previousSection != null) {
+      undo = () {
+        setState(() {
+            currentSection = previousSection;
+            previousSection = null;
+        });
+      };
+    }
     return Scaffold(
       appBar: AppBar(title: Text(widget.book.title)),
       body: Column(
@@ -47,26 +57,39 @@ class _GamebookViewerState extends State<GamebookViewer> {
             child: Markdown(data: bookMap[currentSection].text),
           ),
           Expanded(
-            child: ListView.builder(
-              itemCount: choices.length,
-              itemBuilder: (context, index) {
-                return InkWell(
-                  onTap: () {
-                    if (bookMap[currentSection].choices.containsKey(choices[index])) {
-                      setState(() {
-                        currentSection = bookMap[currentSection].choices[choices[index]];
-                      });
-                    } else {
-                      setState(() {
-                        currentSection = 'error';
-                      });
-                    }
-                  },
-                  child: Card(
-                    child: Text(choices[index]),
+            child: Row(
+              children: <Widget>[
+                Expanded(
+                  child: IconButton(
+                    icon: Icon(Icons.undo),
+                    onPressed: undo,
                   ),
-                );
-              },
+                ),
+                Expanded(
+                  child: ListView.builder(
+                    itemCount: choices.length,
+                    itemBuilder: (context, index) {
+                      return InkWell(
+                        onTap: () {
+                          if (bookMap[currentSection].choices.containsKey(choices[index])) {
+                            setState(() {
+                              previousSection = currentSection;
+                              currentSection = bookMap[currentSection].choices[choices[index]];
+                            });
+                          } else {
+                            setState(() {
+                              currentSection = 'error';
+                            });
+                          }
+                        },
+                        child: Card(
+                          child: Text(choices[index]),
+                        ),
+                      );
+                    },
+                  ),
+                ),
+              ],
             ),
           ),
         ],
