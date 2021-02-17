@@ -52,20 +52,33 @@ class _GamebookViewerState extends State<GamebookViewer> {
     return Scaffold(
       appBar: AppBar(title: Text(widget.book.title)),
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Expanded(
+            flex: 16,
             child: Markdown(data: bookMap[currentSection].text),
           ),
           Expanded(
+            flex: 4,
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Expanded(
-                  child: IconButton(
-                    icon: Icon(Icons.undo),
-                    onPressed: undo,
+                  flex: 2,
+                  child: Card(
+                    child: Padding(
+                      padding: EdgeInsets.all(4.0),
+                      child: IconButton(
+                        icon: Icon(Icons.undo),
+                        onPressed: undo,
+                      ),
+                    ),
                   ),
                 ),
                 Expanded(
+                  flex: 8,
                   child: ListView.builder(
                     itemCount: choices.length,
                     itemBuilder: (context, index) {
@@ -83,7 +96,10 @@ class _GamebookViewerState extends State<GamebookViewer> {
                           }
                         },
                         child: Card(
-                          child: Text(choices[index]),
+                          child: Padding(
+                            padding: EdgeInsets.all(4.0),
+                            child: Text(choices[index]),
+                          ),
                         ),
                       );
                     },

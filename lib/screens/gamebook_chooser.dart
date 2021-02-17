@@ -65,7 +65,21 @@ class _GamebookChooserState extends State<GamebookChooser> {
               );
             },
             child: Card(
-              child: Text(books[index].value.title),
+              child: Padding(
+                padding: EdgeInsets.all(4.0),
+                child: Row(
+                  children: <Widget> [
+                    Expanded(
+                      flex: 1,
+                      child: Icon(Icons.book),
+                    ),
+                    Expanded(
+                      flex: 9,
+                      child: Text(books[index].value.title),
+                    ),
+                  ],
+                ),
+              ),
             ),
           );
         }
