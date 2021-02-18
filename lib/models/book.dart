@@ -79,6 +79,7 @@ class Book {
         bookMap[sections[i].anchor] = sections[i]; 
       }
     }
+    bookMap[sections.last.anchor] = sections.last;
     return Future.value(bookMap);
   }
 
