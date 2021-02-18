@@ -14,16 +14,11 @@ Pausing inside the doorway, your father surveyes the main room before slamming t
 
 You rub your hands to warm them.
 
-_CHOICES:_
-* [“Good day, Father. How was the hunt?”](#baby-its-cold-in-here)
-
-
-### Baby, It's Cold In Here
+“Good day, Father. How was the hunt?”
 
 Your father frowns at the chill in the cottage. “It’s cold. Why isn’t there a fire going?”
 
-_CHOICES:_
-* [“I’m sorry, Father, I forgot. I was outside practicing the sword.”](#too-much-to-ask)
+“I’m sorry, Father, I forgot. I was outside practicing the sword.”
 
 
 ### Too Much To Ask
@@ -36,11 +31,10 @@ Your father shakes your small figure in the air, the muscles in his arm bulging,
 
 “Is that too much to do for somebody who spends the entire day hunting beasts and protecting the land? Perhaps you would like to do it for me? Do you think you could have killed Garmash the Giant?”
 
-_CHOICES:_
-* [“No, Father, I...”](#moving-on)
+“No, Father, I...”
 
 
-### Moving On
+### Betrayal
 
 “Enough,” says your father, throwing you to the ground. You land with a resounding thump.
 
@@ -54,11 +48,7 @@ Your Father walks to the swinging door at the back of the main room, pushing his
 
 “Where is your mother?”
 
-_CHOICES:_
-* [“She is out gathering berries for dinner, Father.”](#betrayal)
-
-
-### Betrayal
+“She is out gathering berries for dinner, Father.”
 
 “She hasn’t begun dinner yet?
 
@@ -66,19 +56,14 @@ You feel as if you've betrayed your mother. You know your father will be really 
 
 “There’s no hot water, either! How does she expect me to wash without hot water?”
 
-_CHOICES:_
-* [You shrug, cowering against the edge of the fireplace, hoping to find some warmth there.](#cleaning-the-sword)
+You shrug, cowering against the edge of the fireplace, hoping to find some warmth there.
 
 
 ### Cleaning the Sword
 
 “Now that you finally have a fire going, go clean my sword.” Your father gestures to the large blade laying on the floor.
 
-_CHOICES:_
-* [“Yes, Father.”](#quickly-now)
-
-
-### Quickly, Now
+“Yes, Father.”
 
 You run to pick up the sword and leave the house.
 
@@ -90,20 +75,12 @@ You dance across the yard, pretending that you, too, could kill a dragon. You se
 
 _CHOICES:_
 * [“Duck. Parry. Lunge. The kill!”](#oops-the-sword-is-stuck)
-* [Clean the sword already!](#how-to-clean-the-sword)
+* [Clean the sword already!](#well-water)
 
 
 ### Oops, the Sword is Stuck
 
 You managed to lodge the sword between two bricks of the well. Prying with all the strength your young body can muster you manage to remove the sword from the crack.
-
-[Continue...](#how-to-clean-the-sword)
-
-
-### How to Clean the Sword
-
-_CHOICES:_
-* [Use water from the well.](#well-water)
 
 
 ### Well Water
@@ -129,8 +106,6 @@ Setting the sword aside, you do what you can for the scabbard. It's not as easy 
 
 Hanging the bucket back on the hook, you let it drop back down into the well.
 
-[Continue...](#should-you-sharpen-the-sword)
-
 
 ### Should you sharpen the sword?
 
@@ -146,8 +121,6 @@ You sit down with your back against the gray limestone of the well, producing a 
 You're not excited about going back inside while your mother is being yelled at. So, instead, you work on cultivating a flawless edge on the blade. You're getting quite good at it since your father has given you plenty of chances to practice.
 
 You keep on sharpening as twilight deepens into night and your fingers numb. As the stars begin to form constellations, you stand and walk slowly toward the house. You know you have to return soon or feel wrath by your father’s hands again.
-
-[Continue...](#once-more-into-the-fray)
 
 
 ### Once More Into the Fray
@@ -168,19 +141,11 @@ Sounds of your mother sobbing drifts in from the kitchen.
 
 “Yes, sir.”
 
-_CHOICES:_
-* [Use the cloths from cleaning the sword.](#a-bird-in-the-hand)
-
-
-### A Bird In The Hand
-
 Again producing the wet cloth, you scrub vigorously at the floor. Luckily, the blood hasn’t set into the wood yet and comes up easily. You then wipe it down with the drier cloth.
 
 “It all came up, Father,” you offer, trying to make peace.
 
 “Lucky for you...”
-
-[Continue...](#a-kettle-full-of-tears)
 
 
 ### A Kettle Full of Tears
@@ -201,8 +166,6 @@ You avoid looking at your mother as you go to the wash barrels in the corner of 
 
 Turning, you return through the swinging door into the main room.
 
-[Continue...](#part-ii-a-story)
-
 
 ## Part II: A Story
 
@@ -222,58 +185,39 @@ You perk up and run to your father’s side, sitting down in front of the large 
 
 “I fought and slayed a monstrous beast today!”
 
-_CHOICES:_
-* [“A dragon?” you ask, knowing the answer already but wanting to hear it from your father.](#yes-a-huge-one)
-
-
-### Yes, A Huge One!
+“A dragon?” you ask, knowing the answer already but wanting to hear it from your father.
 
 “Yes, a huge one!” he says. “You would never believe one could get so big.”
 
-_CHOICES:_
-* [“What did it look like?”](#twice-as-big-as-a-house)
+“What did it look like?”
 
 
 ### Twice As Big As A House
 
 “Well, it was twice as big as our house and green with scales as hard as gemstones. It had giant wings like those of a bat, each as long as the rest of its body, and a tail more muscular and powerful than any you could ever imagine. Its snout had more teeth than you could believe and its fires hotter than that from hell. When it beat its wings, I was pushed backwards by the torrent of wind.”
 
-_CHOICES:_
-* [“However did you defeat such a terrible creature, Father?”](#bravery-and-daring)
-
-
-### Bravery and Daring
+“However did you defeat such a terrible creature, Father?”
 
 “With bravery and daring, I’ll tell you,” your father replies, smiling.
 
 Leaning over, he whispers, “I stayed low, so the wind would have less impact upon me, and crawled up to him...closer, closer...using my shield to fend off the flames. When I knew I was close enough, I jumped for his neck and was able to climb onto his back.”
 
-_CHOICES:_
-* [“Father, not on top of him?” you ask in awe.](#hold-my-ale)
+“Father, not on top of him?” you ask in awe.
 
 
 ### Hold My Ale
 
 “I tell you I climbed right on top of the creature. And, oh, did he howl then!”
 
-_CHOICES:_
-* [“What did you do next, Father?”](#hold-on-tight)
-
-
-### Hold On Tight
+“What did you do next, Father?”
 
 “He thrashed more violently than I’ve ever seen a dragon thrash. Back and forth, trying to throw me. But I am strong, and you know he couldn’t get me off. Centimeter by centimeter, I was able to move up the back of the devilish beast until I had him around the jaw! There, I took out my dagger and gouged out its eyes. They made the most disgusting popping sound.”
 
-_CHOICES:_
-* [“Ewwww!” you giggle. “Did he die then?”](#dont-be-dumb)
-
-
-### Don't Be Dumb
+“Ewwww!” you giggle. “Did he die then?”
 
 “Of course not. If it were that easy to kill a dragon, then they wouldn’t be worth my attention. Any weakling could do it. You have to be a real hero to kill a dragon.”
 
-_CHOICES:_
-* [“Then what did you do?”](#anatomy-lesson)
+“Then what did you do?”
 
 
 ### Anatomy Lesson
@@ -298,19 +242,12 @@ Your father looks up at you and smiles. Then, he frowns.
 
 Looking at the kitchen door that hasn’t moved for many minutes, he yells, “Ellisande! Where’s dinner?”
 
-[Continue...](#part-iii-riders-in-the-valley)
-
 
 ## Part III: Riders in the Valley
 
 As you crunch through the frosty, dew-covered grass back towards the house, you become aware of a group of riders coming down into the valley. They all wear purple. You run into the house to your father’s bedroom.
 
 You knock quietly on the door, trying to disturb him as gently as possible. You don't receive a reply.
-
-_CHOICES:_
-* [Crack the door.](#crack-the-door)
-
-### Crack the Door
 
 You crack the door open to peer into the blackness. Light from the main room plows into the dark bedroom in an angular line that runs across your father’s face. “Father?”
 
@@ -332,18 +269,10 @@ You stop.
 
 “Yes, Father.”
 
-[Continue...](#preparations)
-
 
 ### Preparations
 
 You shut the door to your father’s bedroom quietly and scurry to the kitchen where your mother is already busy preparing the morning meal. As you push through the swinging door, the smell of freshly baked bread intrudes your senses. Your mother makes the most wonderful combinations for bread.
-
-_CHOICES:_
-* [Tell mother about the riders.](#well-need-extra-food)
-
-
-### We'll Need Extra Food
 
 “Mother! Four riders wearing Crown Purple approach! Father says to make something for them and to entertain them. He’ll be up soon.”
 
@@ -352,8 +281,6 @@ _CHOICES:_
 "We'll need more food," she says, turning to begin anew at preparing food.
 
 You return to the main room, scanning the area, hoping that everything is perfect. It all seems in place and as perfect as it could be. Moving over to the window, you look out to check the progress of the riders, pushing aside the curtain so that you can see all four of them. They are just reaching the house. As they began to dismount, you quickly open the door and head outside.
-
-[Continue...](#the-kings-messengers)
 
 
 ### The King's Messengers
@@ -371,8 +298,6 @@ The messangers follow you into the house where you sit them down at the table an
 “Mother, they are here. Is there anything I can bring them?”
 
 Putting four cups on a tray, your mother begins pouring some four-berry juice. “Take this to them. Tell them I will be out soon with some food.”
-
-[Continue...](#sweet-rolls-and-silence)
 
 
 ### Sweet Rolls and Silence
@@ -435,9 +360,6 @@ You wave your arms around wildly. “He had no idea where I was, though.
 The knights smile and there's a polite round of applause.
 
 
-[Continue...](#a-royal-request)
-
-
 ### A Royal Request
 
 When it seems that the knights are at their most uncomfortable, your father makes an entrance. Throwing his door open, he strolls out into the room, the picture of complete self-confidence. “Dame Moonchild, how nice to see you. You’re looking well.” His smile is almost pleasant.
@@ -454,8 +376,6 @@ Your father looks at the four knights with a distant look in his eyes. “The Go
 
 “Of course,” the dame says. “Well, we must be on our way.” The others stand. “Thank your wife for her excellent food. And thank you in advance. Our kingdom is forever indebted.”
 
-[Continue...](#its-curtains-for-you)
-
 
 ### It's Curtains For You
 
@@ -470,8 +390,6 @@ You cringe. “No, Father, of course not...”
 “Maybe you don’t think. Maybe that’s what you’re trying to say.” Your father shoves your head against the window before letting you go to storm off to his bedroom.
 
 Your father leaves soon after the knights.
-
-[Continue...](#part-iv-how-i-met-your-father)
 
 
 ## Part IV: How I Met Your Father
@@ -498,8 +416,6 @@ You look at you mother quizzically.
 
 “Don’t become --” She frowns. Then tries to smile encouragingly. She fails.
 
-[Continue](#defeat)
-
 
 ### Defeat
 
@@ -516,8 +432,6 @@ Your mother runs from inside the house. “What is it?”
 “No...not your father...he wouldn’t be...” she stares up the hill with as much disbelief as you feel.
 
 As the horse comes closer, you both run to it, trying to see what you can do. Your father has crude, blood-soaked bandages wrapped around his left shoulder and leg. His breathing is labored. “Help,” he whispers, pausing to take a breath. “Please, help me.”
-
-[Continue...](#the-fever)
 
 
 ### The Fever
@@ -550,8 +464,6 @@ Your mother then folds cloths up and covers the wounds with them, tying them snu
 
 “I don’t know.” The uncertainty is overwhelming.
 
-[Continue...](#awake)
-
 
 ### Awake
 
@@ -577,9 +489,6 @@ You mother comes into the room.
 
 The glare that your father shoots your mother quiets her. Even hurt, he is sure to be in control. “Help me up.”
 
-_CHOICES:_
-* [Help your father sit up.](#food)
-
 
 ### Food
 
@@ -600,8 +509,6 @@ You look at your father.
 “Wine,” he repeats, more sternly.
 
 You react, returning with a cup of wine, which is gulped down.
-
-[Continue...](#wine)
 
 
 ### Wine
@@ -645,11 +552,6 @@ In a decision that, were you to live that moment over again, ninety-nine out of 
 
 Anger flares in your father’s eyes. Enraged, he shoves you away from him. You fall backwards, the stone of the hearth digging into your flesh. You briefly think that it's done the trick, but then the burning rage dies as quickly as it was lit. Your father sits back in his chair and stares disconsolately into space.
 
-[Continue...](#pep-talk)
-
-
-### Pep Talk
-
 “Father! You’re a great man. You can beat this beast. I know you can. I believe in you.”
 
 Your father looks at you. More tears well in his eyes. “I can’t. I can’t,” he sobbed.
@@ -670,8 +572,6 @@ His grin grows wider. “No.”
 
 Your father does something monumental -- he pulls you close and hugs you affectionately.
 
-[Continue...](#recovery)
-
 
 ### Recovery
 
@@ -679,18 +579,12 @@ The next morning, your father is different. He doesn't yell at anybody and he ev
 
 Soon, he is fully recovered.
 
-[Continue...](#part-v-the-golmorith)
-
 
 ## Part V: The Golmorith
 
 Your father readies to hunt the Golmorith.
 
-_CHOICES:_
-* [“Father, may I go with you? I’ve never seen a monster.”](#not-this-time)
-
-
-### Not This Time
+“Father, may I go with you? I’ve never seen a monster.”
 
 “I don’t think so. It’s going to be very dangerous.”
 
@@ -704,8 +598,6 @@ _CHOICES:_
 Your father thinks for a minute before answering.
 
 “No. My best friend and partner died fighting,” he pauses, shaking his head, “that monster. I can’t let you come along. I can’t bear that kind of loss again.”
-
-[Continue...](#leaving)
 
 
 ### Leaving
@@ -727,11 +619,6 @@ You go to the stables, gather a horse and saddle as well as some travel rations 
 You ride the brown mare. It isn't as strong as your father's horse, but you are light enough that it won’t matter.
 
 Before your mother can catch you, you ride out of the valley in the footsteps of your father.
-
-[Continue...](#keeping-up)
-
-
-### Keeping Up
 
 You have to ride hard for the majority of that day, trying to make up some of the ground between you and your father. It is late afternoon by the time you've determined you are a comfortable distance away.
 
@@ -755,20 +642,14 @@ He laughs a little.
 
 “You have too much of your father in you. Come on. Join me in my camp.” Your father lets go of you and walks back in the direction of his camp. You scurry to stamp out your meager fire and gather up your things.
 
-[Continue...](#camping)
 
-
-### Camping
+### More About the Golmorith
 
 The two of you sit next to the campfire, cooking a rabbit that your father caught, as your father explains things.
 
 “When we get to the Golmorith, I want you to stay as far back as you can without losing sight of me. You won’t have any trouble seeing the beast.” The fire crackles and a branch breaks in the center. “He stands as tall as a tree.”
 
-_CHOICES:_
-* [“Not as tall as a tree, Father?” you say in mock disbelief.](#more-about-the-golmorith)
-
-
-### More About the Golmorith
+“Not as tall as a tree, Father?” you say in mock disbelief.
 
 “Yes, and he’s as strong as ten horses. He stands like a man on two powerful legs, with charcoal black skin that is smooth and polished like ebony, hairless from head to toe. He would look like an overgrown giant, except for his impossibly wide mouth and eyes so large they take in the entire world without moving. His massive hands can crush a human’s skull.”
 
@@ -778,32 +659,18 @@ _CHOICES:_
 
 Your father smiles one of his rare smiles, leans over and smooths your hair, before lying down to sleep.
 
-[Continue...](#dreams)
 
-
-### Dreams
+### The Volcano
 
 You sleep and dream about trees that can walk and eat people. Your father wakes you at sunrise so that you can continue traveling.
 
-[Continue...](#travels)
-
-
-### Travels
-
 As you travel, your father relates stories from his youth, when Christoph and he were still trying to make it as young heroes. It is very pleasant, talking with your father, and you think that you begin to understand him better.
-
-[Continue...](#the-volcano)
-
-
-### The Volcano
 
 Around midday you reach the inactive volcano and cave where the Golmorith had last been seen and fought by your father. It is nowhere around, though.
 
 “Now what?” you ask.
 
 “We need to check towns. He’s probably gone to feed.
-
-[Continue...](#choose-a-town-to-search)
 
 
 ### Choose A Town To Search
@@ -818,14 +685,16 @@ _CHOICES:_
 
 When you reach Summit Hold, it is peaceful.
 
-[Continue...](#choose-a-town-to-search)
+_CHOICES:_
+* [Continue...](#choose-a-town-to-search)
 
 
 ### Eagle Reach
 
 You and your father search Eagle Reach. Nothing disturbs it.
 
-[Continue...](#choose-a-town-to-search)
+_CHOICES:_
+* [Continue...](#choose-a-town-to-search)
 
 
 ### Granite Falls
@@ -835,8 +704,6 @@ You make your way into Granite Falls, a town of only about thirty buildings with
 Body parts are strewn about the street. In the middle of it all stands the Golmorith.
 
 You vomit.
-
-[Continue...](#the-beast)
 
 
 ### The Beast
@@ -849,49 +716,29 @@ The monster looks at your father and drops the headless corpse it had been busy 
 
 You trail at a distance to see what happens.
 
-[Continue...](#into-the-woods)
-
-
-### Into the Woods
-
-Your father leads the beast into the dense woods nearby. The beast is slowed by the thick, close trees, trying to squeeze between them in his attempt to chase down your father. You dare not get too close to the woods, for fear of becoming the object of the Golmorith’s attentions, but you can’t see what your father is doing.
-
-_CHOICES:_
-* [Wait.](#doing-as-youre-told)
 
 ### Doing As You're Told
+
+Your father leads the beast into the dense woods nearby. The beast is slowed by the thick, close trees, trying to squeeze between them in his attempt to chase down your father. You dare not get too close to the woods, for fear of becoming the object of the Golmorith’s attentions, but you can’t see what your father is doing.
 
 You wait, as you were told.
 
 The Golmorith screams and begins to swat the trees around him, trying to break free. You see smoke coming out from the woods, billowing in dark clouds. Flames begin licking all around the monster, spreading quickly. Your father comes hurtling out of the brush, smiling in triumph.
 
-[Continue...](#toe-chopping)
 
-
-### Toe Chopping
+### Over the Edge
 
 The Golmorith has decided to not be finished yet, however, and begins to break its way out. Your father leaps off his horse. As the monster comes to the treeline, but is still encumbered, he begins to chop at the thing’s toes. It howls in anger but is not slowed a wink.
-
-[Continue...](#the-falls)
-
-
-### The Falls
 
 The creature breaks free and your father runs, mounts and rides away in one smooth motion. He gallops hard, but the Golmorith runs just as hard. You think they are headed straight for the falls and if you are right, your father will be trapped. There is nothing out there for your father to take shelter in. But at the rate the Golmorith is catching up to your father, you aren’t sure it matters.
 
 As they near the edge, you can make it out more clearly and hear water in the distance. They are getting very close, but your father doesn’t appear to be slowing.
 
-_CHOICES:_
-* [“No!” you scream. “Father, No!”](#over-the-edge)
-
-
-### Over the Edge
+“No!” you scream. “Father, No!”
 
 It's too late. To your horror, your father launches himself over the precipice. He drops out of sight.
 
 The monster turns his head to look at you, but keeps on running blindly, and then screams as it tries to halt. But its momentum is too great and the Golmorith tumbles forward over the side.
-
-[Continue...](#face-to-face)
 
 
 ### Face to Face
@@ -900,16 +747,12 @@ You slow the mare and then dismount, walking unsteadily to where you had seen yo
 
 You hear a scrape and spin back to see the Golmorith pulling itself over the edge. Bile rises in your throat. The creature’s black skin pulls tight as it levers itself up. Then, it stares at you, a cruel smile forming on its mouth.
 
-[Continue...](#the-death-of-a-legend)
-
 
 ### The Death of A Legend
 
 The creature’s muscles tense and it begins to move towards you –- you can almost feel the monster begin to kill you –- and then, the monster freezes, a large sword protruding from its belly.
 
 It screams and totters forward. You scramble out of the way as it falls to the ground. Standing behind the beast is your father -- larger than life and as proud as can be.
-
-[Continue...](#the-return-of-a-legend)
 
 
 ### The Return of A Legend
