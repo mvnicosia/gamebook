@@ -57,7 +57,17 @@ class _GamebookViewerState extends State<GamebookViewer> {
         children: <Widget>[
           Expanded(
             flex: 16,
-            child: Markdown(data: bookMap[currentSection].text),
+            child: ShaderMask(
+              shaderCallback: (rect) {
+                return LinearGradient(
+                  begin: Alignment(0.0, 0.9),
+                  end: Alignment.bottomCenter,
+                  colors: [Colors.black, Colors.transparent],
+                ).createShader(Rect.fromLTRB(0, 0, rect.width, rect.height));
+              },
+              blendMode: BlendMode.dstIn,
+              child: Markdown(data: bookMap[currentSection].text),
+            ),
           ),
           Expanded(
             flex: 4,
