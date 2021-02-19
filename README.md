@@ -1,16 +1,36 @@
 # gamebook
 
-A new Flutter project.
+ Play gamebooks written in github-flavored markdown.
 
-## Getting Started
+## Parsing
 
-This project is a starting point for a Flutter application.
+### Headings (1-3) are parsed into pages
 
-A few resources to get you started if this is your first Flutter project:
+ * Only use headings led with hashtags (#).
+ * Any text under a heading (and before the next) is parsed into the text for that section (page).
+ * H1 is parsed as the book title; any text under it is parsed onto the title page.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+### Links between pages (Choices)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+ * A section will be auto-linked to the subsequent section using the text `Continue...` if no choices are provided.
+ * Choices may be provided using the text `_CHOICES:_` and an unordered-list:
+ ```
+### Example Section With Choices
+
+Here is a section that has choices.
+
+_CHOICES:_
+* [Choose option 1](#option-1)
+* [Choose option 2](#option-2)
+
+
+### Option 1
+
+You chose poorly.
+
+
+### Option 2
+
+You chose wisely.
+
+ ```
