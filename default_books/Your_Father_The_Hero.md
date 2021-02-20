@@ -3,6 +3,7 @@ by Michael Nicosia
 
 
 ## Part I: The Hero Comes Home
+------------------------------
 
 You are kneeling by the cold, red brick fireplace when your father comes home. The large oak door to the cottage opens, letting in a blast of cold, making you shiver.
 
@@ -22,6 +23,7 @@ Your father frowns at the chill in the cottage. “It’s cold. Why isn’t ther
 
 
 ### Too Much To Ask
+-------------------
 
 Rage envelops your father’s face. He covers the ground between you quickly, picking you up with one hand.
 
@@ -35,6 +37,7 @@ Your father shakes your small figure in the air, the muscles in his arm bulging,
 
 
 ### Betrayal
+------------
 
 “Enough,” says your father, throwing you to the ground. You land with a resounding thump.
 
@@ -44,7 +47,7 @@ Your father shakes your small figure in the air, the muscles in his arm bulging,
 
 You scramble in front of the hearth, hands shaking, and attempt to use the flint to start the fire.
 
-Your Father walks to the swinging door at the back of the main room, pushing his way through to the kitchen with a loud crack as the door slams against the wall on the other side. Before the door has begun to swing back, your father comes back through the doorway.
+Your father walks to the swinging door at the back of the main room, pushing his way through to the kitchen with a loud crack as the door slams against the wall on the other side. Before the door has begun to swing back, your father comes back through the doorway.
 
 “Where is your mother?”
 
@@ -60,6 +63,7 @@ You shrug, cowering against the edge of the fireplace, hoping to find some warmt
 
 
 ### Cleaning the Sword
+----------------------
 
 “Now that you finally have a fire going, go clean my sword.” Your father gestures to the large blade laying on the floor.
 
@@ -79,11 +83,13 @@ _CHOICES:_
 
 
 ### Oops, the Sword is Stuck
+----------------------------
 
 You managed to lodge the sword between two bricks of the well. Prying with all the strength your young body can muster you manage to remove the sword from the crack.
 
 
 ### Well Water
+--------------
 
 You lean the sword against the side of the well and begin to wind the crank, raising the bucket from the deep hole. The well is a few hundred meters deep, so it takes a few minutes before you begin to see the bucket rise with your rotations. The water will be pure, though, coming from so deep. Your breath steams with the work.
 
@@ -101,6 +107,7 @@ _CHOICES:_
 
 
 ### Clean the Scabbard
+----------------------
 
 Setting the sword aside, you do what you can for the scabbard. It's not as easy to clean as the sword and there would be new stains in the hard leather to add to the old ones. You do manage to get most of the blood out. It will have to dry on its own before you can put the sword back in it, however.
 
@@ -108,6 +115,7 @@ Hanging the bucket back on the hook, you let it drop back down into the well.
 
 
 ### Should you sharpen the sword?
+---------------------------------
 
 _CHOICES:_
 * [Sharpen the sword.](#sharpen-the-sword)
@@ -115,6 +123,7 @@ _CHOICES:_
 
 
 ### Sharpen the Sword
+---------------------
 
 You sit down with your back against the gray limestone of the well, producing a whetstone from your cloak to begin sharpening the sword.
 
@@ -124,6 +133,7 @@ You keep on sharpening as twilight deepens into night and your fingers numb. As 
 
 
 ### Once More Into the Fray
+---------------------------
 
 The moonlight reflects off the soft stones of the cottage as you approach. They seem to offer safety and refuge, but as you push open the hard oak door you are faced with the reality of the situation.
 
@@ -149,6 +159,7 @@ Again producing the wet cloth, you scrub vigorously at the floor. Luckily, the b
 
 
 ### A Kettle Full of Tears
+--------------------------
 
 You stand staring at the back of the big chair, dark and cold in comparison to the light that falls around it. Your father says no more.
 
@@ -168,6 +179,7 @@ Turning, you return through the swinging door into the main room.
 
 
 ## Part II: A Story
+-------------------
 
 “Child,” your father asks, but less a question than a statement.
 
@@ -180,6 +192,7 @@ _CHOICES:_
 
 
 ### To Kill A Dragon
+--------------------
 
 You perk up and run to your father’s side, sitting down in front of the large chair and your father. The warmth of the fire is pleasant after having been outside for so long. Your father reaches out and ruffles your hair.
 
@@ -193,6 +206,7 @@ You perk up and run to your father’s side, sitting down in front of the large 
 
 
 ### Twice As Big As A House
+---------------------------
 
 “Well, it was twice as big as our house and green with scales as hard as gemstones. It had giant wings like those of a bat, each as long as the rest of its body, and a tail more muscular and powerful than any you could ever imagine. Its snout had more teeth than you could believe and its fires hotter than that from hell. When it beat its wings, I was pushed backwards by the torrent of wind.”
 
@@ -206,6 +220,7 @@ Leaning over, he whispers, “I stayed low, so the wind would have less impact u
 
 
 ### Hold My Ale
+---------------
 
 “I tell you I climbed right on top of the creature. And, oh, did he howl then!”
 
@@ -221,6 +236,7 @@ Leaning over, he whispers, “I stayed low, so the wind would have less impact u
 
 
 ### Anatomy Lesson
+------------------
 
 “Well, you see, I’m smart about dragons. I know where their soft spot is, right inside the pits of their legs. But try getting there when they can see you going for them -- it’s not going to happen, believe me.”
 
@@ -237,6 +253,7 @@ _CHOICES:_
 
 
 ### One Hero in the Family
+--------------------------
 
 Your father looks up at you and smiles. Then, he frowns.
 
@@ -244,6 +261,7 @@ Looking at the kitchen door that hasn’t moved for many minutes, he yells, “E
 
 
 ## Part III: Riders in the Valley
+---------------------------------
 
 As you crunch through the frosty, dew-covered grass back towards the house, you become aware of a group of riders coming down into the valley. They all wear purple. You run into the house to your father’s bedroom.
 
@@ -271,6 +289,7 @@ You stop.
 
 
 ### Preparations
+----------------
 
 You shut the door to your father’s bedroom quietly and scurry to the kitchen where your mother is already busy preparing the morning meal. As you push through the swinging door, the smell of freshly baked bread intrudes your senses. Your mother makes the most wonderful combinations for bread.
 
@@ -284,6 +303,7 @@ You return to the main room, scanning the area, hoping that everything is perfec
 
 
 ### The King's Messengers
+-------------------------
 
 The four riders wear purple-striped riding pants and purple tunics with knighthood ranks over frilly white shirts. Their black leather boots look finely made. They all carry ceremonial swords that look to have never been used in real combat. Each rides a black stallion with a coat that gleams blue in the morning sun.
 
@@ -301,6 +321,7 @@ Putting four cups on a tray, your mother begins pouring some four-berry juice. �
 
 
 ### Sweet Rolls and Silence
+---------------------------
 
 First, the conversation at the table consists of exclamations over how wonderful your mother’s sweet rolls are. After a while, it changes to mutterings about the weather turning cold. Then, it becomes an uncomfortable silence.
 
@@ -316,6 +337,7 @@ _CHOICES:_
 
 
 ### A Retelling
+---------------
 
 "Did you know my father killed a dragon yesterday?"
 
@@ -331,6 +353,7 @@ _CHOICES:_
 
 
 ### A Story-Teller Needs Experience
+-----------------------------------
 
 You need to get it together.
 
@@ -348,6 +371,7 @@ _CHOICES:_
 
 
 ### Perseverance
+----------------
 
 “But, umm, my father is smart about dragons. Their soft spot is right inside the pits of their legs. But you can't get there when they can see you going for them -- it’s not going to happen, _believe me._
 
@@ -361,6 +385,7 @@ The knights smile and there's a polite round of applause.
 
 
 ### A Royal Request
+-------------------
 
 When it seems that the knights are at their most uncomfortable, your father makes an entrance. Throwing his door open, he strolls out into the room, the picture of complete self-confidence. “Dame Moonchild, how nice to see you. You’re looking well.” His smile is almost pleasant.
 
@@ -378,6 +403,7 @@ Your father looks at the four knights with a distant look in his eyes. “The Go
 
 
 ### It's Curtains For You
+-------------------------
 
 The knights depart the valley. You and your father watch as they ride out of the valley. Your father seems deathly quiet. Then, he turns and you can almost feel the heat of his anger. “Do you try to make a fool of me? Does that please you?”
 
@@ -393,6 +419,7 @@ Your father leaves soon after the knights.
 
 
 ## Part IV: How I Met Your Father
+---------------------------------
 
 The next couple of days are peaceful for you. Your chores are easy enough to stay on top of and it leaves you plenty of time to practice the sword -- at least, when your mother isn’t making you learn to read and write.
 
@@ -418,6 +445,7 @@ You look at you mother quizzically.
 
 
 ### Defeat
+----------
 
 You begin to worry about your father after the first week. Usually, his trips only last a couple of days. Three or four is rare. Five is unheard of.
 
@@ -435,6 +463,7 @@ As the horse comes closer, you both run to it, trying to see what you can do. Yo
 
 
 ### The Fever
+-------------
 
 You and your mother lead the horse up to the doorway and drag your father off the horse, trying to carry his massive form into the house. Together, you can barely support him, but you are eventually able to get him onto the bed in his room.
 
@@ -466,6 +495,7 @@ Your mother then folds cloths up and covers the wounds with them, tying them snu
 
 
 ### Awake
+---------
 
 The first few days after your father's return are rough. He drifts in and out of consciousness. When he is awake, the delirium keeps him from being intelligible.
 
@@ -491,6 +521,7 @@ The glare that your father shoots your mother quiets her. Even hurt, he is sure 
 
 
 ### Food
+--------
 
 You help your father sit up in bed. He is dizzy at first and almost falls over. “Food,” he whispers.
 
@@ -512,6 +543,7 @@ You react, returning with a cup of wine, which is gulped down.
 
 
 ### Wine
+--------
 
 “More.”
 
@@ -521,6 +553,7 @@ _CHOICES:_
 
 
 ### Depression
+--------------
 
 It began like that. But it gets worse. Your father stays in a drunken stupor, sitting in front of the fireplace, talking to himself when he isn’t demanding wine or food.
 
@@ -547,6 +580,7 @@ _CHOICES:_
 
 
 ### The Slap Heard Around The Cottage
+-------------------------------------
 
 In a decision that, were you to live that moment over again, ninety-nine out of one hundred times you wouldn’t make again -- you slap your father.
 
@@ -574,6 +608,7 @@ Your father does something monumental -- he pulls you close and hugs you affecti
 
 
 ### Recovery
+------------
 
 The next morning, your father is different. He doesn't yell at anybody and he even shares in some of the housework before going outside to stretch his muscles and see if he can’t regain some of his strength. He eats well and drinks none.
 
@@ -581,6 +616,7 @@ Soon, he is fully recovered.
 
 
 ## Part V: The Golmorith
+------------------------
 
 Your father readies to hunt the Golmorith.
 
@@ -594,6 +630,7 @@ _CHOICES:_
 
 
 ### Persistent
+--------------
 
 Your father thinks for a minute before answering.
 
@@ -601,6 +638,7 @@ Your father thinks for a minute before answering.
 
 
 ### Leaving
+-----------
 
 A little while later, your father leaves the house. You and your mother wave goodbye. Eventually, she turns and goes inside the house, but you watch as your father's horse makes the climb out of the valley.
 
@@ -611,6 +649,7 @@ _CHOICES:_
 
 
 ### Following
+-------------
 
 You make the decision. You _will_ see the monster. You just won't let your father see you.
 
@@ -629,6 +668,7 @@ _CHOICES:_
 
 
 ### Light a Fire
+----------------
 
 You dismount and lead your horse out of the way, so you won’t be detected. You tie the mare’s reins to a tree and set about trying to construct a camp.
 
@@ -644,6 +684,7 @@ He laughs a little.
 
 
 ### More About the Golmorith
+----------------------------
 
 The two of you sit next to the campfire, cooking a rabbit that your father caught, as your father explains things.
 
@@ -661,6 +702,7 @@ Your father smiles one of his rare smiles, leans over and smooths your hair, bef
 
 
 ### The Volcano
+---------------
 
 You sleep and dream about trees that can walk and eat people. Your father wakes you at sunrise so that you can continue traveling.
 
@@ -674,6 +716,7 @@ Around midday you reach the inactive volcano and cave where the Golmorith had la
 
 
 ### Choose A Town To Search
+---------------------------
 
 _CHOICES:_
 * [Summit Hold](#summit-hold)
@@ -682,6 +725,7 @@ _CHOICES:_
 
 
 ### Summit Hold
+---------------
 
 When you reach Summit Hold, it is peaceful.
 
@@ -690,6 +734,7 @@ _CHOICES:_
 
 
 ### Eagle Reach
+---------------
 
 You and your father search Eagle Reach. Nothing disturbs it.
 
@@ -698,6 +743,7 @@ _CHOICES:_
 
 
 ### Granite Falls
+-----------------
 
 You make your way into Granite Falls, a town of only about thirty buildings with houses and stores perched near the top of a giant waterfall.
 
@@ -707,6 +753,7 @@ You vomit.
 
 
 ### The Beast
+-------------
 
 It is huge, bigger than you would have imagined. Black and hairless, the monstrous being must stand thirty feet tall, heavily muscled. Monstrous white eyes with small black pupils bulge from his flat face. His wide nose with flaring nostrils almost, but not quite, distracts from his gaping mouth that contains sparkling, razor sharp teeth.
 
@@ -718,6 +765,7 @@ You trail at a distance to see what happens.
 
 
 ### Doing As You're Told
+------------------------
 
 Your father leads the beast into the dense woods nearby. The beast is slowed by the thick, close trees, trying to squeeze between them in his attempt to chase down your father. You dare not get too close to the woods, for fear of becoming the object of the Golmorith’s attentions, but you can’t see what your father is doing.
 
@@ -727,6 +775,7 @@ The Golmorith screams and begins to swat the trees around him, trying to break f
 
 
 ### Over the Edge
+-----------------
 
 The Golmorith has decided to not be finished yet, however, and begins to break its way out. Your father leaps off his horse. As the monster comes to the treeline, but is still encumbered, he begins to chop at the thing’s toes. It howls in anger but is not slowed a wink.
 
@@ -742,6 +791,7 @@ The monster turns his head to look at you, but keeps on running blindly, and the
 
 
 ### Face to Face
+----------------
 
 You slow the mare and then dismount, walking unsteadily to where you had seen your father make his heroic leap. Looking down over the bluff, you can see nothing for the long drop and the spray of water. You turn away, head swimming. Your father killed himself to save everyone. You fall to your knees, tears welling up and unable to breathe. Your father was the greatest man you’d known. He was a hero.
 
@@ -749,6 +799,7 @@ You hear a scrape and spin back to see the Golmorith pulling itself over the edg
 
 
 ### The Death of A Legend
+-------------------------
 
 The creature’s muscles tense and it begins to move towards you –- you can almost feel the monster begin to kill you –- and then, the monster freezes, a large sword protruding from its belly.
 
@@ -756,6 +807,7 @@ It screams and totters forward. You scramble out of the way as it falls to the g
 
 
 ### The Return of A Legend
+--------------------------
 
 “Father! You’re alive! I thought you were dead. I was so worried...And when the Golmorith came back...”
 
