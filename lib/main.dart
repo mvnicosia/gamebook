@@ -12,6 +12,12 @@ class GamebookApp extends StatelessWidget {
     return MaterialApp(
       title: '$title',
       home: GamebookChooser(appTitle: title),
+      theme: ThemeData(
+        brightness: Brightness.light,
+      ),
+      darkTheme: ThemeData(
+        brightness: Brightness.dark,
+      ),
     );
   }
 }

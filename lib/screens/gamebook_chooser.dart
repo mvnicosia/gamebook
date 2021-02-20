@@ -65,8 +65,9 @@ class _GamebookChooserState extends State<GamebookChooser> {
               );
             },
             child: Card(
+              margin: EdgeInsets.all(30.0),
               child: Padding(
-                padding: EdgeInsets.all(4.0),
+                padding: EdgeInsets.all(15.0),
                 child: Row(
                   children: <Widget> [
                     Expanded(
