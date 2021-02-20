@@ -66,7 +66,12 @@ class _GamebookViewerState extends State<GamebookViewer> {
                 ).createShader(Rect.fromLTRB(0, 0, rect.width, rect.height));
               },
               blendMode: BlendMode.dstIn,
-              child: Markdown(data: bookMap[currentSection].text),
+              child: Markdown(
+                data: bookMap[currentSection].text,
+                styleSheet: MarkdownStyleSheet.fromTheme(Theme.of(context)).copyWith(
+                    blockquote: TextStyle(color: Colors.black),
+                ),
+              ),
             ),
           ),
           Expanded(

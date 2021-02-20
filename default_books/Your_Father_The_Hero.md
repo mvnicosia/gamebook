@@ -2,10 +2,14 @@
 by Michael Nicosia
 
 
-## Part I: The Hero Comes Home
-------------------------------
+## Part I: The Hero
+-------------------
 
-You are kneeling by the cold, red brick fireplace when your father comes home. The large oak door to the cottage opens, letting in a blast of cold, making you shiver.
+> You are kneeling by the cold, red brick fireplace when your father comes home. The large oak door to the cottage opens, letting in a blast of cold, making you shiver.
+
+
+### Father Comes Home
+---------------------
 
 The doorway tightly frames a burly man with dark, wooly hair. He has dark eyes, accentuated by angular brows that stand out upon his face.
 
@@ -181,11 +185,9 @@ Turning, you return through the swinging door into the main room.
 ## Part II: A Story
 -------------------
 
-“Child,” your father asks, but less a question than a statement.
-
-“Yes, Father?”
-
-“Come sit beside me and I will tell you about my day!”
+> “Child,” your father asks, but less a question than a statement.
+> “Yes, Father?”
+> “Come sit beside me and I will tell you about my day!”
 
 _CHOICES:_
 * [Hurry to your father's side.](#to-kill-a-dragon)
@@ -263,7 +265,11 @@ Looking at the kitchen door that hasn’t moved for many minutes, he yells, “E
 ## Part III: Riders in the Valley
 ---------------------------------
 
-As you crunch through the frosty, dew-covered grass back towards the house, you become aware of a group of riders coming down into the valley. They all wear purple. You run into the house to your father’s bedroom.
+> As you crunch through the frosty, dew-covered grass back towards the house, you become aware of a group of riders coming down into the valley. They all wear purple. You run into the house to your father’s bedroom.
+
+
+### Waking the Beast
+--------------------
 
 You knock quietly on the door, trying to disturb him as gently as possible. You don't receive a reply.
 
@@ -421,7 +427,11 @@ Your father leaves soon after the knights.
 ## Part IV: How I Met Your Father
 ---------------------------------
 
-The next couple of days are peaceful for you. Your chores are easy enough to stay on top of and it leaves you plenty of time to practice the sword -- at least, when your mother isn’t making you learn to read and write.
+> The next couple of days are peaceful for you. Your chores are easy enough to stay on top of and it leaves you plenty of time to practice the sword -- at least, when your mother isn’t making you learn to read and write.
+
+
+### What is the Golmorith
+-------------------------
 
 You enjoy the time you spend with your mother. When your father is absent for days at a time, her mood lightens and the years seem to fall off of her. You can’t really get enough of it. The second night after your father left you ask, “Mother, how did you end up with Father?”
 
@@ -618,11 +628,9 @@ Soon, he is fully recovered.
 ## Part V: The Golmorith
 ------------------------
 
-Your father readies to hunt the Golmorith.
-
-“Father, may I go with you? I’ve never seen a monster.”
-
-“I don’t think so. It’s going to be very dangerous.”
+> Your father readies to hunt the Golmorith.
+> “Father, may I go with you? I’ve never seen a monster.”
+> “I don’t think so. It’s going to be very dangerous.”
 
 _CHOICES:_
 * [“Father, please? I swear, I won’t get in the way. I just want to see it.”](#persistent)
