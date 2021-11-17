@@ -13,7 +13,7 @@ class GamebookChooser extends StatefulWidget {
 
   final String title;
 
-  GamebookChooser({Key key, String appTitle}) :
+  GamebookChooser(String appTitle, {Key? key}) :
     title = '$appTitle: Chooser',
     super(key: key);
 
@@ -23,7 +23,7 @@ class GamebookChooser extends StatefulWidget {
 
 class _GamebookChooserState extends State<GamebookChooser> {
 
-  final List<String> defaultBooks = ['your_father_the_hero.md'];
+  final List<String> defaultBooks = ['Your_Father_The_Hero.md'];
   BookList bookList = BookList('',{});
   String selected = "";
 
@@ -60,7 +60,7 @@ class _GamebookChooserState extends State<GamebookChooser> {
               Navigator.push(
                 context, 
                 MaterialPageRoute(
-                  builder: (context) => GamebookViewer(book: books[index].value),
+                  builder: (context) => GamebookViewer(books[index].value),
                 ),
               );
             },

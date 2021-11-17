@@ -9,7 +9,7 @@ class GamebookViewer extends StatefulWidget {
 
   final Book book;
 
-  GamebookViewer({Key key, Book this.book}) : super(key: key);
+  GamebookViewer(Book this.book, {Key? key}) : super(key: key);
 
   @override
   _GamebookViewerState createState() => _GamebookViewerState();
@@ -20,32 +20,34 @@ class _GamebookViewerState extends State<GamebookViewer> {
   @override
   initState() {
     _loadBook();
+    currentSection = bookMap['loading'];
+    previousSection = null;
     super.initState();
   }
 
   Map<String,Section> bookMap = {
-    'start': Section(text: 'Loading...'),
-    'error': Section(text: 'There was an error loading the book.'),
+    'loading': Section('', 'Loading...', {}),
+    'error': Section('', 'There was an error loading the book.', {}),
   };
-  String currentSection = 'start';
-  String previousSection = null;
+  Section? currentSection;
+  Section? previousSection;
 
   Future<void> _loadBook() async {
     Map<String,Section> bookMap = await widget.book.read();
     setState(() {
       this.bookMap.addAll(bookMap);
+      currentSection = bookMap['start'];
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    List<String> choices = List.from(bookMap[currentSection].choices.keys);
+    List<String> choices = currentSection?.choices.keys.toList() ?? [];
     var undo = null;
-    if (previousSection != null) {
+    if (previousSection != currentSection) {
       undo = () {
         setState(() {
             currentSection = previousSection;
-            previousSection = null;
         });
       };
     }
@@ -67,7 +69,7 @@ class _GamebookViewerState extends State<GamebookViewer> {
               },
               blendMode: BlendMode.dstIn,
               child: Markdown(
-                data: bookMap[currentSection].text,
+                data: currentSection?.text ?? '',
                 styleSheet: MarkdownStyleSheet.fromTheme(Theme.of(context)).copyWith(
                     blockquote: TextStyle(color: Colors.black),
                 ),
@@ -99,16 +101,10 @@ class _GamebookViewerState extends State<GamebookViewer> {
                     itemBuilder: (context, index) {
                       return InkWell(
                         onTap: () {
-                          if (bookMap[currentSection].choices.containsKey(choices[index])) {
-                            setState(() {
-                              previousSection = currentSection;
-                              currentSection = bookMap[currentSection].choices[choices[index]];
-                            });
-                          } else {
-                            setState(() {
-                              currentSection = 'error';
-                            });
-                          }
+                          setState(() {
+                            previousSection = currentSection;
+                            currentSection = bookMap[currentSection?.choices[choices[index]] ?? 'error'];
+                          });
                         },
                         child: Card(
                           child: Padding(
@@ -126,5 +122,5 @@ class _GamebookViewerState extends State<GamebookViewer> {
         ],
       ),
     );
-  } 
+  }
 }

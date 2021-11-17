@@ -16,10 +16,12 @@ class Book {
   static final RegExp choiceLinkRegex = RegExp(
       r"\[(?<linkText>[^\[\]]+)\]\((?<anchorText>#[\w\-]+)\)");
 
+  static final Section fileNotFound = Section('#404', 'File not found!', {});
+
   final String title;
   final String filepath;
 
-  Map<String,Section> bookMap = Map<String,Section>();
+  Map<String,Section> bookMap = {};
 
   Book(this.title, this.filepath);
 
@@ -32,19 +34,19 @@ class Book {
     if (exists) {
       return await _parseBook(file);
     } else {
-      bookMap['start'] = Section(text: 'File not found!');
+      bookMap['start'] = fileNotFound; 
       return Future.value(bookMap);
     }
   }
 
   Future<Map<String,Section>> _parseBook(File file) async {
     List<String> lines = await file.readAsLines();
-    List<Section> sections = List<Section>();
+    List<Section> sections = [];
     for (int i=0; i<lines.length; i++) {
-      Section section = Section();      
-      if (anyHeadingRegex.hasMatch(lines[i])) {
-        section.text = lines[i];
-        section.anchor = anchorReference(lines[i]);
+      String text = lines[i];
+      String anchor = anchorReference(text);
+      Map<String,String> choices = {};
+      if (anyHeadingRegex.hasMatch(text)) {
         while (i<lines.length-1 && !anyHeadingRegex.hasMatch(lines[i+1])) {
           i = i+1;
           if (choicesRegex.hasMatch(lines[i])) {
@@ -53,30 +55,34 @@ class Book {
                 ulRegex.hasMatch(lines[i+1])) {
               i = i+1;
               String line = lines[i].split(ulRegex).last.trim();
-              RegExpMatch match = choiceLinkRegex.firstMatch(line);
+              RegExpMatch? match = choiceLinkRegex.firstMatch(line);
               if (match != null) {
-                String linkText = match.namedGroup("linkText");
-                String anchorText = match.namedGroup("anchorText");
-                section.choices[linkText] = anchorText;
+                String? linkText = match.namedGroup('linkText');
+                String? anchorText = match.namedGroup('anchorText');
+                if (linkText != null && anchorText != null) {
+                  choices[linkText] = anchorText;
+                }
               }
             }
           } else {
-            section.text = '${section.text}\n${lines[i]}';
+            text = '${text}\n${lines[i]}';
           }
         }
       } else {
         continue;
       }
-      sections.add(section);
+      sections.add(Section(anchor, text, choices));
     }
     for (int i=0; i<sections.length-1; i++) {
-      if (sections[i].choices.isEmpty) {
-        sections[i].choices['Continue...'] = sections[i+1].anchor;
+      Section thisSection = sections[i];
+      Section nextSection = sections[i+1];
+      if (thisSection.choices.isEmpty) {
+        thisSection.choices['Continue...'] = nextSection.anchor;
       }
       if (i == 0) {
-        bookMap['start'] = sections[i];
+        bookMap['start'] = thisSection;
       } else {
-        bookMap[sections[i].anchor] = sections[i]; 
+        bookMap[thisSection.anchor] = thisSection; 
       }
     }
     bookMap[sections.last.anchor] = sections.last;

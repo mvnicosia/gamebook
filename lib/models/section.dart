@@ -1,13 +1,10 @@
 class Section {
 
-  String anchor = "";
-  String text = "";
-  Map<String,String> choices = Map<String,String>();
+  final String anchor;
+  final String text;
+  final Map<String,String> choices;
 
-  Section({String anchor, String text, Map<String,String> choices}) :
-    this.anchor = anchor ?? "",
-    this.text = text ?? "",
-    this.choices = choices ?? Map<String,String>();
+  Section(String this.anchor, String this.text, Map<String,String> this.choices);
 
   @override
   String toString() {
