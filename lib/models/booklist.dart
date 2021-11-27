@@ -25,12 +25,6 @@ class BookList {
     return await file.writeAsString(jsonEncode(books));
   }
 
-  Future<BookList> _read() async { 
-    File file = await _file();
-    String content = await file.readAsString();
-    return Future.value(BookList.fromJson(jsonDecode(content)));
-  }
-
   Future<BookList> add(Book book) async {
     books[book.filepath] = book;
     await _write();
