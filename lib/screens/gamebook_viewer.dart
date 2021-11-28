@@ -20,34 +20,29 @@ class _GamebookViewerState extends State<GamebookViewer> {
   @override
   initState() {
     _loadBook();
-    currentSection = bookMap['loading'];
-    previousSection = null;
+    currentSection = widget.book.currentSection;
+    previousSection = widget.book.previousSection;
     super.initState();
   }
 
-  Map<String,Section> bookMap = {
-    'loading': Section('', 'Loading...', {}),
-    'error': Section('', 'There was an error loading the book.', {}),
-  };
-  Section? currentSection;
-  Section? previousSection;
+  Section? currentSection = null;
+  Section? previousSection = null;
 
   Future<void> _loadBook() async {
-    Map<String,Section> bookMap = await widget.book.read();
+    await widget.book.read();
     setState(() {
-      this.bookMap.addAll(bookMap);
-      currentSection = bookMap['start'];
+      currentSection = widget.book.currentSection;
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    List<String> choices = currentSection?.choices.keys.toList() ?? [];
+    List<String> choices = widget.book.currentChoices();
     var undo = null;
     if (previousSection != currentSection) {
       undo = () {
         setState(() {
-            currentSection = previousSection;
+            currentSection = widget.book.setSection(previousSection);
         });
       };
     }
@@ -102,8 +97,8 @@ class _GamebookViewerState extends State<GamebookViewer> {
                       return InkWell(
                         onTap: () {
                           setState(() {
-                            previousSection = currentSection;
-                            currentSection = bookMap[currentSection?.choices[choices[index]] ?? 'error'];
+                            currentSection = widget.book.followChoice(choices[index]);
+                            previousSection = widget.book.previousSection;
                           });
                         },
                         child: Card(

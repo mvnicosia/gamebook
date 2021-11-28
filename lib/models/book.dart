@@ -13,30 +13,33 @@ class Book {
   static final RegExp choiceLinkRegex = RegExp(
       r"\[(?<linkText>[^\[\]]+)\]\((?<anchorText>#[\w\-]+)\)");
 
-  static final Section fileNotFound = Section('#404', 'File not found!', {});
-
   final String title;
   final String filepath;
 
-  Map<String,Section> bookMap = {};
+  Map<String,Section> map = {
+    'loading': Section('', 'Loading...', {}),
+    'error': Section('', 'There was an error loading the book.', {}),
+  };
 
-  Book(this.title, this.filepath);
+  Section? currentSection;
+  Section? previousSection = null;
 
-  Future<Map<String,Section>> read() async {
-    if (bookMap.isNotEmpty) {
-      return Future.value(bookMap);
-    }
+  Book(this.title, this.filepath) {
+    currentSection = map['loading'];
+  }
+
+  Future<void> read() async {
     File file = File(filepath);
     bool exists = await file.exists();
     if (exists) {
-      return await _parseBook(file);
+      await _parseBook(file);
+      currentSection = map['start'];
     } else {
-      bookMap['start'] = fileNotFound; 
-      return Future.value(bookMap);
+      currentSection = map['error'];
     }
   }
 
-  Future<Map<String,Section>> _parseBook(File file) async {
+  Future<void> _parseBook(File file) async {
     List<String> lines = await file.readAsLines();
     List<Section> sections = [];
     for (int i=0; i<lines.length; i++) {
@@ -77,13 +80,12 @@ class Book {
         thisSection.choices['Continue...'] = nextSection.anchor;
       }
       if (i == 0) {
-        bookMap['start'] = thisSection;
+        map['start'] = thisSection;
       } else {
-        bookMap[thisSection.anchor] = thisSection; 
+        map[thisSection.anchor] = thisSection; 
       }
     }
-    bookMap[sections.last.anchor] = sections.last;
-    return Future.value(bookMap);
+    map[sections.last.anchor] = sections.last;
   }
 
   static String anchorReference(String heading) {
@@ -94,6 +96,20 @@ class Book {
       replaceAll(RegExp(r"[^a-zA-Z0-9\-]"), "").
       toLowerCase();
   }
+
+  Section? setSection(Section? section) {
+    previousSection = currentSection;
+    currentSection = section;
+    return currentSection;
+  }
+
+  Section? followChoice(String key) {
+    previousSection = currentSection;
+    currentSection = map[currentSection?.choices[key] ?? 'error'];
+    return currentSection;
+  }
+
+  List<String> currentChoices() => currentSection?.choices.keys.toList() ?? [];
 
   Book.fromJson(Map<String, dynamic> json)
     : title = json['title'],
