@@ -9,6 +9,7 @@ class Book {
 
   static final RegExp anyHeadingRegex = RegExp(r"^\s{0,3}#{1,6}");
   static final RegExp choicesRegex = RegExp(r"^_CHOICES:_");
+  static final RegExp endRegex = RegExp(r"^_The End_");
   static final RegExp ulRegex = RegExp(r"^[*-+]\s");
   static final RegExp choiceLinkRegex = RegExp(
       r"\[(?<linkText>[^\[\]]+)\]\((?<anchorText>#[\w\-]+)\)");
@@ -46,6 +47,7 @@ class Book {
       String text = lines[i];
       String anchor = anchorReference(text);
       Map<String,String> choices = {};
+      bool isTheEnd = false;
       if (anyHeadingRegex.hasMatch(text)) {
         while (i<lines.length-1 && !anyHeadingRegex.hasMatch(lines[i+1])) {
           i = i+1;
@@ -64,6 +66,8 @@ class Book {
                 }
               }
             }
+          } else if (endRegex.hasMatch(lines[i])) {
+            isTheEnd = true;
           } else {
             text = '${text}\n${lines[i]}';
           }
@@ -71,12 +75,12 @@ class Book {
       } else {
         continue;
       }
-      sections.add(Section(anchor, text, choices));
+      sections.add(Section(anchor, text, choices, isTheEnd: isTheEnd));
     }
     for (int i=0; i<sections.length-1; i++) {
       Section thisSection = sections[i];
       Section nextSection = sections[i+1];
-      if (thisSection.choices.isEmpty) {
+      if (thisSection.choices.isEmpty && !thisSection.isTheEnd) {
         thisSection.choices['Continue...'] = nextSection.anchor;
       }
       if (i == 0) {

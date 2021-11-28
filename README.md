@@ -28,9 +28,14 @@ _CHOICES:_
 
 You chose poorly.
 
+_The End_
 
 ### Option 2
 
 You chose wisely.
 
  ```
+
+### Endings
+
+Ending sections are signaled with `_The End_` without choices. The back button will still work. A landscape icon will display.

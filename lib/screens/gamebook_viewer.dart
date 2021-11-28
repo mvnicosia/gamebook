@@ -71,6 +71,9 @@ class _GamebookViewerState extends State<GamebookViewer> {
               ),
             ),
           ),
+          Center(
+            child: currentSection?.isTheEnd == true ? Icon(Icons.landscape) : SizedBox.shrink(),
+          ),
           Expanded(
             flex: 4,
             child: Row(

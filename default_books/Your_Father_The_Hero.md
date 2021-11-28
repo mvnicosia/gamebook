@@ -663,7 +663,9 @@ You make the decision. You _will_ see the monster. You just won't let your fathe
 
 You go to the stables, gather a horse and saddle as well as some travel rations you would need for the journey. You don’t have much, but you don’t think you will be gone for too long. A week at most.
 
-You ride the brown mare. It isn't as strong as your father's horse, but you are light enough that it won’t matter.
+You also grab a sword. Practically a sliver compared to your father's sword, but it's the right size for your build.
+
+You ride the brown mare. It isn't as strong as your father's horse, but again, you are light enough that it won’t matter.
 
 Before your mother can catch you, you ride out of the valley in the footsteps of your father.
 
@@ -763,7 +765,7 @@ You vomit.
 ### The Beast
 -------------
 
-It is huge, bigger than you would have imagined. Black and hairless, the monstrous being must stand thirty feet tall, heavily muscled. Monstrous white eyes with small black pupils bulge from his flat face. His wide nose with flaring nostrils almost, but not quite, distracts from his gaping mouth that contains sparkling, razor sharp teeth.
+It is huge, bigger than you would have imagined. Gray and hairless, the monstrous being must stand thirty feet tall, heavily muscled. Monstrous white eyes with small black pupils bulging from his flat face. His wide nose with flaring nostrils almost, but not quite, distracts from his gaping mouth that contains sparkling, razor sharp teeth.
 
 Your father acts quickly, riding into the town, screaming and waving his sword in the air. “Hey you bastard! Look at me! Remember me? You thought you defeated me this time, didn’t you? But I’m alive! Come and get me!”
 
@@ -805,6 +807,49 @@ You slow the mare and then dismount, walking unsteadily to where you had seen yo
 
 You hear a scrape and spin back to see the Golmorith pulling itself over the edge. Bile rises in your throat. The creature’s black skin pulls tight as it levers itself up. Then, it stares at you, a cruel smile forming on its mouth.
 
+_CHOICES:_
+* [Pull your sword.](#brave-child)
+* [Run.](#a-poor-sprinter)
+* [Freeze.](#the-death-of-a-legend)
+
+
+### Brave Child
+---------------
+
+Ducking a swinging arm, you pull your sword from its sheath and drive the point of the blade down through the monster's foot. You roll through its legs as the beast is slowed by the blow. It tries to track you over its shoulder, but it is thrown off balance by its wounded foot and it tips over backwards. You scramble out of the way as it tips over the side of the bluff, this time unable to catch itself. You watch it fall head first to the rocks far below. 
+
+_CHOICES:_
+* [Return home.](#years-later)
+* [Sit down.](#one-hero)
+
+### One Hero
+
+You sit down on the edge and breathe heavily, completely exhausted. As you look over the countryside, you hear the scrape of metal on rock and look in astonishment at your father pulling himself over the edge about fifteen feet away. You run over to give him your hand in aid. He grabs your hand and yanks you over the cliff. As you fall, you can only think of Christoph.
+
+_The End_
+
+
+### Years Later
+---------------
+
+You sit proudly on your horse, overlooking the valley as the king's men wend their way up.
+
+"Are those the king's men?", your son asks.
+
+"Get back inside and don't show yourself!", you reply.
+
+_The End_
+
+
+### A Poor Sprinter
+-------------------
+
+You turn and run, but you were never very fast and the Golmorith takes only a couple of steps to make up the distance. It begins to rip your limbs off one at a time and you watch as it holds you with a crushing grip in one hand and feeds pieces of you into its gaping maw with the other. Thankfully, you pass out from the pain and fright before too long.
+
+Eventually, the Golmorith makes its way down the cliff and eats your father's remains. You just weren't all that satisfying of a meal.
+
+_The End_
+
 
 ### The Death of A Legend
 -------------------------
@@ -828,10 +873,3 @@ You are confused. “What...”
 “You disobeyed. When we return home, you will be punished. Clean my sword,” he says, tossing the sword at you. You fall under the weight of the metal.
 
 _The End_
-
-<!--
-Alternative endings:
-* the Golmorith wins
-* you kill the Golmorith and become like your father
-* you kill the Golmorith and your father kills you (just like he killed Cristoph)
--->
